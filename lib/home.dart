@@ -61,9 +61,9 @@ class _HomeState extends State<Home> {
           style: TextStyle(color: Colors.white),
         ),
       ),
-      body: Container(
-        padding: EdgeInsets.all(42),
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
+        child: Container(
+          padding: EdgeInsets.all(16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
