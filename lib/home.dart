@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_atm_consultoria/telaCliente.dart';
+import 'package:flutter_atm_consultoria/telaContato.dart';
+import 'package:flutter_atm_consultoria/telaEmpresa.dart';
+import 'package:flutter_atm_consultoria/telaServico.dart';
 import 'package:flutter_atm_consultoria/util/enums.dart';
 
 class Home extends StatefulWidget {
@@ -12,12 +16,36 @@ class _HomeState extends State<Home> {
   void _abrirTela(Telas telaEscolhida) {
     switch (telaEscolhida) {
       case Telas.empresa:
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => TelaEmpresa(),
+          ),
+        );
         break;
       case Telas.servico:
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => TelaServico(),
+          ),
+        );
         break;
       case Telas.cliente:
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => TelaCliente(),
+          ),
+        );
         break;
       case Telas.contato:
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => TelaContato(),
+          ),
+        );
         break;
     }
   }
