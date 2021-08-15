@@ -1,5 +1,5 @@
 name: flutter_atm_consultoria
-description: A new Flutter project.
+description: A aplicação consiste em uma tela Home de uma empresa fictícia de onde será possível navegar entre as telas Serviço, Empresa, Contato e Cliente.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
