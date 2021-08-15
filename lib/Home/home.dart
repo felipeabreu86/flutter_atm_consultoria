@@ -72,7 +72,7 @@ class _HomeState extends State<Home> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(bottom: 10, top: 80),
+                    padding: const EdgeInsets.only(bottom: 30, top: 80),
                     child: Image.asset("assets/images/logo.png"),
                   ),
                   Padding(
