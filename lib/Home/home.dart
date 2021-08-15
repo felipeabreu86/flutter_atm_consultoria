@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_atm_consultoria/Cliente/cliente.dart';
+import 'package:flutter_atm_consultoria/Contato/contato.dart';
+import 'package:flutter_atm_consultoria/Empresa/empresa.dart';
+import 'package:flutter_atm_consultoria/Servico/servico.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -8,6 +12,42 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  void _abrirEmpresa() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => Empresa(),
+      ),
+    );
+  }
+
+  void _abrirServico() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => Servico(),
+      ),
+    );
+  }
+
+  void _abrirCliente() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => Cliente(),
+      ),
+    );
+  }
+
+  void _abrirContato() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => Contato(),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +69,7 @@ class _HomeState extends State<Home> {
             child: SingleChildScrollView(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(bottom: 10, top: 80),
@@ -41,11 +81,11 @@ class _HomeState extends State<Home> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         GestureDetector(
-                          onTap: null,
+                          onTap: _abrirEmpresa,
                           child: Image.asset("assets/images/menu_empresa.png"),
                         ),
                         GestureDetector(
-                          onTap: null,
+                          onTap: _abrirServico,
                           child: Image.asset("assets/images/menu_servico.png"),
                         ),
                       ],
@@ -55,11 +95,11 @@ class _HomeState extends State<Home> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       GestureDetector(
-                        onTap: null,
+                        onTap: _abrirCliente,
                         child: Image.asset("assets/images/menu_cliente.png"),
                       ),
                       GestureDetector(
-                        onTap: null,
+                        onTap: _abrirContato,
                         child: Image.asset("assets/images/menu_contato.png"),
                       ),
                     ],
